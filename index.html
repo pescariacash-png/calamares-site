@@ -7,89 +7,74 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #111; /* Fundo escuro */
-      color: #ffffff;
+      background-color: #111;
+      color: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      height: 100vh;
+      min-height: 200vh; /* Aumenta a altura da página para forçar scroll */
       text-align: center;
-      overflow: hidden;
-      padding: 20px;
+      padding-top: 150px; /* Distância do topo para dar sensação de espaço */
+      padding-bottom: 150px;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 6rem; /* Maior título para ocupar mais espaço */
       font-weight: 200;
       letter-spacing: 3px;
-      margin-bottom: 30px;
-      color: #ffffff;
+      margin-bottom: 80px;
     }
 
     .whatsapp-button {
       display: inline-block;
       background: linear-gradient(135deg, #25D366, #128C7E);
       color: white;
-      padding: 18px 40px;
-      font-size: 1.3rem;
+      padding: 25px 60px;
+      font-size: 1.5rem;
       font-weight: 600;
       border-radius: 50px;
       text-decoration: none;
       transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      margin-top: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      margin-top: 50px;
     }
 
     .whatsapp-button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
     }
 
     .address {
-      margin-top: 20px;
-      font-size: 1rem;
-      font-weight: 200;
+      margin-top: 80px;
+      font-size: 1.2rem;
       color: #aaaaaa;
-      line-height: 1.5;
     }
 
     .promo {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       font-weight: 400;
-      color: #ffffff; /* Frases em branco */
-      margin-bottom: 15px;
+      color: #ffffff;
+      margin-bottom: 50px;
       opacity: 0;
       animation: fadeIn 3s forwards;
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
+      0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      .whatsapp-button {
-        padding: 15px 30px;
-        font-size: 1.1rem;
-      }
-      .address {
-        font-size: 0.9rem;
-      }
-      .promo {
-        font-size: 1rem;
-      }
+      h1 { font-size: 4rem; }
+      .whatsapp-button { padding: 20px 50px; font-size: 1.3rem; }
+      .address { font-size: 1rem; }
+      .promo { font-size: 1.2rem; margin-bottom: 30px; }
+      body { padding-top: 100px; padding-bottom: 100px; }
     }
   </style>
 </head>
@@ -101,8 +86,7 @@
   <div class="promo" style="animation-delay: 2s;">Compre agora pelo WhatsApp!</div>
   <div class="promo" style="animation-delay: 3s;">Elevando toda a região!</div>
 
-  <!-- Link direto para WhatsApp -->
-  <a href="https://wa.me/556898965550" target="_blank" class="whatsapp-button">
+  <a href="https://api.whatsapp.com/send?phone=5568999865550" target="_blank" class="whatsapp-button">
     WhatsApp
   </a>
 
