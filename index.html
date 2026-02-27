@@ -15,8 +15,8 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #ffffff;
-      color: #111;
+      background-color: #111; /* Fundo escuro para destacar letras brancas */
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -31,6 +31,7 @@
       font-weight: 200;
       letter-spacing: 3px;
       margin-bottom: 30px;
+      color: #ffffff;
     }
 
     .whatsapp-button {
@@ -56,14 +57,14 @@
       margin-top: 20px;
       font-size: 1rem;
       font-weight: 200;
-      color: #555;
+      color: #aaaaaa;
       line-height: 1.5;
     }
 
     .promo {
       font-size: 1.2rem;
       font-weight: 400;
-      color: #128C7E;
+      color: #ffffff; /* Frases em branco */
       margin-bottom: 15px;
       opacity: 0;
       animation: fadeIn 3s forwards;
@@ -97,7 +98,9 @@
   <div class="promo">Looks incríveis para toda a família!</div>
   <div class="promo" style="animation-delay: 1s;">Promoções exclusivas hoje!</div>
   <div class="promo" style="animation-delay: 2s;">Compre agora pelo WhatsApp!</div>
+  <div class="promo" style="animation-delay: 3s;">Elevando toda a região!</div>
 
+  <!-- Link corrigido para abrir direto no WhatsApp -->
   <a href="https://wa.me/556898965550" target="_blank" class="whatsapp-button">
     WhatsApp
   </a>
@@ -106,4 +109,4 @@
     Avenida Marechal Teodoro, Centro, Nº 1117
   </div>
 </body>
-      </html>
+    </html>
